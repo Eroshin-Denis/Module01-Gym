@@ -1,8 +1,18 @@
+.header {
+    display: flex;
+}
+
 .header-logo {
     display: block;
-    background-image: url(../images/logo.svg);
-    width: 176px;
-    height: 56px;
+    background-image: url(../images/Logotip.svg);
+    width: 246px;
+    height: 76px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.header-item {
+    display: flex;
+}
+.header-nav {
+    display: flex;
 }
