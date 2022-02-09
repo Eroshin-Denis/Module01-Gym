@@ -66,13 +66,19 @@ nav {
     display: block;
 }
 .visual {
-    background: yellowgreen;
+    background-image: url(../images/fon-left.png);
+    background-size: cover; 
+    background-position: center center;
 }
 .visual-bg {
     display: flex;
     height: 850px;
+    justify-content: flex-end;
+    position: relative;
     gap: 10%;
-}
+
+
+    }
  .visual-bg-left {
     flex-basis: 535px; 
     height: 100%;
@@ -89,8 +95,18 @@ nav {
     background-position: center center;
     
  }
-.visual img {
-      position: absolute;  
+.visual-bg img {
+    /* flex-basis: 100%;
+   height: fit-content;
+    position: absolute; 
+    align-self: flex-end;
+     */
+     width: 100%;
+     height: -webkit-fit-content;
+     height: -moz-fit-content;
+     height: fit-content;
+     position: absolute;
+     left: 2%; 
 }
 
 
