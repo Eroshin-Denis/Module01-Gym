@@ -1,8 +1,13 @@
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
+    
       <meta charset="utf-8">
       <title>Тренажёрный зал</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
       <link rel="stylesheet" href="styles/normalize.css">
       <link rel="stylesheet" href="styles/gym.css">
 </head>
@@ -11,11 +16,11 @@
         <header id="headerTop">
             <div class="container">
                 <div class="header">
-                    <div class="header-fitness" hidden>
-                        <button class="fitness" onclick="openModal()"><img src="images/modal/menu.svg" alt="Меню"></button>
-                    </div>
                     <div class="header-item">
                         <a href="index.html" class="header-logo"></a>
+                        <div class="header-fitness">
+                            <button class="fitness" onclick="openModal()"><img src="images/menu/menu-button.svg" alt="Меню"></button>
+                        </div>
                         <nav>
                             <ul class="header-nav">
                                 <li><a href="#">Мероприятия</a></li>
@@ -40,35 +45,175 @@
             <div class="container">
                 <div class="content">
                     <h1 class="content-title">
-                        онлайн тренировки
-                    <span> любой сложности</span>
+                        онлайн&nbspтренировки
+                    <span> любой&nbspсложности</span>
                     </h1>
-                    <p class="content-info">>15 тренировок</p>
-                    <p class="content-text">в области спортивной физиологии и нутрициологии</p>
-                    <a class="content-link" href="menu.html">Узнать подробнее</a>
+                    <p class="content-info">>15&nbspтренировок</p>
+                    <p class="content-text"><span>в&nbspобласти&nbspспортивной</span> физиологии&nbspи&nbspнутрициологии</p>
+                    <a class="content-link" href="#">Узнать&nbspподробнее</a>
+                    <div class="div-button-up">
+                        <button href="#menuFitness" class="button-up">
+                    </div>
+                    </button>
                 </div>
                 <div class="visual">
                     <div class="visual-bg">
                         <div class="visual-bg-left">1</div>
                         <div class="visual-bg-right">2</div>
-                        <img src="images/burger2.png" alt="Bad girl">
+                        <img id="id_img" src="images/Gym-girl.png" alt="Bad girl">
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="div2" id="div2">2</div>
+        <div class="div3" id="div3">3</div>
+        <div class="div4" id="div4">4</div>
+        <div class="div5" id="div5">5</div>
+        <section class="menu" id="menuFitness">
+            <div class="container">
+                <div class="menu-heder">
+                    <h2 class="menu-title">
+                        Ближайшие события
+                    </h2>
+                </div>
+                <div class="menu-flex">
+                    <div class="menu-flex-cover">
+                        <img src="images/menu/01.jpg" alt="Марафон">
+                    </div>
+                    <div class="menu-flex-cover">
+                        <img src="images/menu/02.jpg" alt="Тренер">
+                    </div>
+                    <div class="menu-flex-cover">
+                        <img src="images/menu/03.jpg" alt="Йога">
                     </div>
                 </div>
             </div>
-        </div>        
-           
-              <aside></aside> 
-            
-              <footer></footer> 
+        </section>
+        <mark>
+            <div class="container">
+                    <div class="workout-header">
+                        <p class="p1">Расписание тренировок</p>
+                        <p class="p2">22-28 июня</p>
+                    </div>
+                    <div class="workout">
+                        <div class="part1">
+                            <p>22 июня, 10:00</p>
+                            <img class="ico" src="images/icons/body.svg" alt="Торс">
+                            <p>Функциональный тренинг</p>
+                        </div>
+                        <div class="part2">
+                            <p>24 июня, 10:00</p>
+                            <img class="ico" src="images/icons/bottle.svg" alt="Бутылка">
+                            <p>Body sculpt</p>
+                        </div>
+                        <div class="part3">
+                            <p>26 июня, 11:00</p>
+                            <img class="ico" src="images/icons/dumbbell.svg" alt="Гантеля">
+                            <p>L.A.B.</p>
+                        </div>
+                        <div class="part4">
+                            <p>23 июня, 10:00</p>
+                            <img class="ico" src="images/icons/jump.svg" alt="Скакалка">
+                            <p>Силовой микс</p>
+                            <p>Упражнения помогут создать красивый рельеф и прийти в спортивную форму.</p>
+                        </div>
+                        <div class="part5">
+                            <p>25 июня, 11:00</p>
+                            <img class="ico" src="images/icons/heart.svg" alt="Сердце">
+                            <p>Дыхательные практики</p>
+                        </div>
+                        <div class="part6">
+                            <p>27 июня, 10:00</p>
+                            <img class="ico" src="images/icons/weight.svg" alt="Гиря">
+                            <p>Комплексная разминка</p>
+                        </div>
+                    </div>
+            </div>
+        </mark>
+        <section class="subscription">
+            <div class="container">
+                <div class="e-mail">
+                    <div class="wrap">
+                        <div class="e-mail-title">
+                            <img src="images/Pattern.png" alt="Круг">
+                            <p>Подпишитесь на рассылку</p></div>
+                            <form class="e-mail-enter" action="/example/handler.php">
+                                <p><input placeholder="Ваш e-mail" name="login"></p>
+                                <p>ПОДПИСАТЬСЯ</p>
+                            </form>
+                        <div class="e-mail-jackdaw">
+                            <img src="images/check_box.svg" alt="Галка">
+                            <p>Согласен с обработкой <a href="#">персональных данных</a></p></div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+
+        <summary>
+            <div class="container">
+                <div class="company">
+                    <div class="company-grid">
+                        <div> <p>О компании</p>
+                            <p>Наша компания является одной из немногих, кто <br> предлагает фитнес услуги онлайн! Оставайтесь <br>с нами и вы сами увидите, что мы проводим <br>не только онлайн-тренировки.</p>
+                        <button>Записаться</button>
+                        </div>
+                        <div><img src="images/trainer.png" alt="Тренер"></div>
+                        <div><p>Экономия времени </p><p>Не нужно тратить время на дорогу</p></div>
+                        <div><p>Индивидуальный подход</p><p>Внимание тренера пренадлежит только вам</p></div>
+                        <div><p>Экономия денег</p><p>Средняя цена одной тренировки - 700₽</p></div>
+                        <div><p>Опытный персонал</p><p>Стаж работы у наших тренеров от 5 лет</p></div>
+                    </div>
+                </div>
+            </div>
+
+        </summary>
+        <footer>
+            <header>
+                <header id="headerTop">
+                    <div class="container">
+                        <div class="header">
+                            <div class="header-item">
+                                <a href="index.html" class="header-logo"></a>
+                                <div class="header-fitness">
+                                    <button class="fitness" onclick="openModal()"><img src="images/menu/menu-button.svg" alt="Меню"></button>
+                                </div>
+                                <nav>
+                                    <ul class="header-nav">
+                                        <li><a href="#">Мероприятия</a></li>
+                                        <li><a href="#">Расписание</a></li>
+                                        <li><a href="#">О компании</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="e-mail-fit-circle"></div><p class="e-mail-fit">info@freefit.com</p>
+                                <div class="head-btn">
+                                    <button type="button" class="Instagramicon">
+                                                <img src="images/Instagramicon.svg" alt="Инстаграм">
+                                    </button>
+                                    <button type="button" class="Feisbukicon">
+                                            <img src="images/Feisbukicon.svg" alt="Фейсбук">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="footer-row"><p>© 2020, Все права защищены</p><p>Сделано в рамках курса учебной платформы Annblok</p></div>
+                        </div>
+                    </div>
+                </header>          
+              </header> 
+        </footer> 
               <address hidden>
                 Этот партал зделан сабствинаручно веб-дизайнером Денисом Ерошиным в праграме 
                 Блакнот. Если вы хатите взять маи статьи к сибе на сайт то спрасите мое 
                 разришение.  @deniseroshin4   https://vk.com/id88563979 
               </address>
-            
-                  <script type="text/javascript">
-              
-              </script>
-              
+            <script type="text/javascript"></script>     
 </body>
+<script src="script/scriptMain.js"></script>
 </html>
+
+
+
+
+
+
+
+
