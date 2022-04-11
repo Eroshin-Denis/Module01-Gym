@@ -60,20 +60,16 @@ border: none;
 cursor: pointer;
 background-color: transparent;
 }
-
-/* блок майн с девушкой  */
+/* блок майн с девушкой  *//* блок майн с девушкой  *//* блок майн с девушкой  */
  .main .container {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
     display: flex;  
-    border: 3px solid red;
-    margin-bottom: 100px;
+    margin-bottom: 175px;
  }
  .content {
     flex: 0 1 36%;
-      /* flex-basis: 15%;    */
-    border: 3px solid fuchsia;
     min-width: 0;
     position: relative;
  }
@@ -137,7 +133,6 @@ background-color: transparent;
     max-height: 850px;
     flex: 1 0 auto;
     position: relative;
-    border: 3px solid violet;
 }
 .visual-bg {
     display: flex;
@@ -149,7 +144,6 @@ background-color: transparent;
     background-image: url(../images/fon-left.png);
     background-size: cover; 
     background-position: center center;
-    border: 3px solid blue;
  }
  .visual-bg-right {
     position: relative;
@@ -158,8 +152,6 @@ background-color: transparent;
     background-image: url(../images/fon-right.png);
     background-size: cover; 
     background-position: center center;
-    border: 3px solid green;
-
  }
 .visual-bg img {
     position: absolute;
@@ -170,18 +162,84 @@ background-color: transparent;
     align-self: flex-end;
     left:  -14%;
 }
-
 /* блок услуг меню*//* блок услуг меню*//* блок услуг меню*/
+#menuFitness {
+    margin-bottom: 130px;
+}
+.menu-title {
+    font-weight: 700;
+    font-size: 40px;
+    color: #2B3541;
+    text-align: left;
+    margin-bottom: 42px;
+}
 .menu-flex {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     margin-bottom: 50px;
-
 }
+.menu-flex-cover {
+    position: relative;
+    max-width: 367px;
+    min-width: 300px;
+    height: 600px;
+    flex: 1 1 32%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.menu-flex-cover:hover p:nth-child(3) {
+    display: inline-block;
+}
+.menu-flex-cover p {
+    margin-left: 30px;
+}
+.menu-flex-cover p:nth-child(1) {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2B3541;
+    opacity: 0.6;
+    margin-top: 37px;
+}
+.menu-flex-cover p:nth-child(2) {
+    font-weight: 700;
+    font-size: 28px;
+    color: #2B3541;
+    margin-top: 25px;
+}
+.menu-flex-cover p:nth-child(3) {
+    position: absolute;
+    display: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FBF138;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 37px;
+    background: #2B3541;
+    transition: 1s;
+}
+.menu-flex-cover p:nth-child(4) {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    color: #2B3541;
+    margin-top: 25px;
+    text-align: center;
+    padding: 12px 20px;
+    background: #FBF138;
+    float: right; 
+    margin-top: 104%; 
+    margin-bottom: 0;
+}
+#id_div1 {background-image: url("../images/menu/01.png");}  
+#id_div2  {background-image: url(../images/menu/02.jpg);}
+#id_div3  {background-image: url(../images/menu/03.jpg);}
+#id_div1:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/01.png");}
+#id_div2:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/02.jpg");}
+#id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/03.jpg");}
 /*блок деталей*//*блок деталей*//*блок деталей*/
 .workout-header {
-
 }
 .p1 {
     display: inline-block;
@@ -190,7 +248,6 @@ background-color: transparent;
     font-size: 40px;
     color: #2B3541;
     text-align: left;
-    background: aqua;
 }
 .p2 {
     display: inline;
@@ -198,10 +255,8 @@ background-color: transparent;
     height: 92px;
     font-weight: 700;
     font-size: 28px;
-    color: #2B3541;
-    background: aqua;   
+    color: #2B3541;  
     margin: 40px 0;
-    
 }
 .workout  {
     display: flex;
@@ -209,19 +264,20 @@ background-color: transparent;
     align-content: space-between;
     height: 728px;
     justify-content: space-between;
-    margin-bottom: 100px;
-
-
+    margin-bottom: 140px;
 }
-
 .workout div {
     border: 3px solid gray;
     max-width: 367px;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 .workout div p:nth-child(1) {
-    background: turquoise;
+    font-weight: 400;
+    font-size: 18px;
+    color: #010101;
+    opacity: 0.7;
     width: 45%;
     float: right; 
 }
@@ -229,14 +285,29 @@ background-color: transparent;
    position: absolute;
    bottom: 30%;
    left: 10%;
+   transition: 1s;
 }
 .workout div p:nth-child(3) {
    position: absolute;
-   background: #FBF138;
+   font-weight: 700;
+   font-size: 18px;
+   color: #2B3541; 
    bottom: 10%;
    left: 10%;
+   transition: 1s;
 }
-
+.workout div p:nth-child(4) {
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    color: #2B3541;
+    bottom: -25%;
+    left: 10%;
+    transition: 1s;
+ }
+.workout div:hover img:nth-child(2) {bottom: 60%;}
+.workout div:hover p:nth-child(3) {bottom: 40%;}
+.workout div:hover p:nth-child(4) {bottom: 5%;}
 .part1 {
     height: 250px;
     order: 1;
@@ -252,16 +323,16 @@ background-color: transparent;
 .part4 {
     height: 433px;
     order: 2;
+    background: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, .2) 100%);
 }
-.part4 p:nth-child(4) {
-    position: absolute;
-    background: #FBF138;
-    top: auto;
-    bottom: 0;
-
+.part4 img:nth-child(2) {
+    bottom: 60%;
 }
-.part4 p:nth-child(3) {
-    bottom: 70%;
+.workout div.part4 p:nth-child(3) {
+    bottom: 40%;
+}
+.workout div.part4 p:nth-child(4) {
+    bottom: 5%;
 }
 .part5 {
     height: 281px;
@@ -274,32 +345,19 @@ background-color: transparent;
  /*Блок подписки*/ /*Блок подписки*/ /*Блок подписки*/
 .subscription {
     background: #F3F3F3;
-    width: 100%;
-     
+    width: 100%; 
  }
 .e-mail {
     height: 348px;
-    border: 3px solid red;
-    margin-bottom: 80px;
-   display: flex;
+    margin-bottom: 155px;
+    display: flex;
 }
 .wrap {
-
-    width: 820px;
-    border: 3px solid blue;
-    /* position: relative;  */
-    /* left: 10%; */
+    width: 740px;
     margin: auto auto;
-
-
 }
 .e-mail-title {
     display: flex;
-    /* position: absolute; */
-    top: 20%;
-    left: 40%;
-   
-    background: yellowgreen;
 }
 .e-mail-title img {
     width: 123px; 
@@ -312,25 +370,27 @@ background-color: transparent;
     font-size: 40px;
     color: #2B3541;
     text-align: left;
-
     position: relative; 
     flex: 1 0 25%;
     left: -50px;
-    background: thistle;
     align-self: center;
 }
 .e-mail-enter {
     display: flex;
-    /* position: absolute; */
-    top: 55%;
-    left: 40%;
+    padding-left: 10%;
+    gap: 45px;
+}
+.e-mail-enter p{
+  margin: 0;
 }
 .e-mail-enter input {
+    width: 330px;
+    height: 65px;
+    background: #ffffff;
     font-weight: 400;
     font-size: 18px;
     color: #2B3541;
     text-align: left;
-    opacity: 0.3;
     padding-left: 10%;
 }
 .e-mail-enter p:nth-child(2) {
@@ -339,15 +399,14 @@ background-color: transparent;
     font-size: 16px;
     color: #2B3541;
     text-align: center; 
-    width: 225px;
     align-self: center;
+    padding: 24px 45px;
+    background-color: #FBF138;
 }
 .e-mail-jackdaw {
     display: flex;
-    /* position: absolute; */
-    top: 74%;
-    left: 40%;
-    background: turquoise;
+    padding-bottom: 38px;
+    padding-left: 10%;
 }
 .e-mail-jackdaw p {
     margin-left: 5px;
@@ -365,30 +424,83 @@ background-color: transparent;
 }
 /* Блок о компании */ /* Блок о компании */ /* Блок о компании */
 .company-grid {
-    background: turquoise;
     display: grid;
     grid-template-columns: 291px 291px 291px 291px;
     grid-template-rows: 335px 335px;
-    margin-bottom: 50px;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 .company-grid div:nth-child(1) {
-    background: violet;
     grid-column-start: 1;
     grid-column-end: 3;
+}
+.company-grid div:nth-child(1) p:nth-child(1) {
+    font-weight: 700;
+    font-size: 40px;
+    color: #2B3541;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.company-grid div:nth-child(1) p:nth-child(2) {
+    font-weight: 400;
+    font-size: 18px;
+    color: #2B3541;
+    line-height: 150%;
+    margin-bottom: 31px;
+}
+.company-grid div:nth-child(1) button:nth-child(3) {
+    background-color: #FBF138;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #2B3541;
+    padding: 22px 50px;
+    border: none;
+    cursor: pointer;
 }
 .company-grid div:nth-child(2) {
     grid-column-start: 3;
     grid-column-end: 5;
+    justify-self: end;
+    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
 }
-/*Блок подвала*/ /*Блок подвала*/ /*Блок подвала*/ /*Блок подвала*/
+.company-grid div:nth-child(2) img {
+    opacity: 0.7;
+}
+.company-grid div:nth-child(n+3) p:nth-child(1) {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2B3541;
+    margin-top: 80px;
+    margin-bottom: 25px;
+}
+.company-grid div:nth-child(n+3) p:nth-child(2) {
+    font-weight: 400;
+    font-size: 18px;
+    color: #2B3541;
+    line-height: 150%;
+    opacity: 0.6;
+}
+.company-grid div:nth-child(n+4) {
+    margin-left: auto;
+}
+/*Блок подвала */ /*Блок подвала*/ /*Блок подвала*/ /*Блок подвала*/
 footer {
     background: #F3F3F3;
     width: 100%;
+    padding-top: 10px;
+    height: 100%;
  }
  footer nav {
-    /* background: turquoise; */
+    
+}
+footer .header-nav a {
+    font-size: 14px;                
 }
 .e-mail-fit {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2B3541;
      z-index: 1; 
 }
 .e-mail-fit-circle {
@@ -402,17 +514,18 @@ footer {
     z-index: 0; 
 }
 footer .head-btn {
-    background: turquoise;
+    justify-content: center;
+    margin-left: 20px;
 }
 .footer-row {
     display: flex;
     justify-content: space-between;
+    background: #F3F3F3;
 }
 .footer-row p {
     font-weight: 400;
     font-size: 14px;
-    color: #2B3541;
-    opacity: 0.3;
+    color: rgba(43, 53, 65, 0.3);
 }
 @media (max-width: 1140px) {
     .content-title {

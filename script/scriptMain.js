@@ -20,10 +20,6 @@
       var mainColor = rootStyles.getPropertyValue('--margin-left-VAR');
     let el_con_inf = document.getElementsByClassName('content-info')[0];
     let el_workout = document.getElementsByClassName('workout')[0];
-    var el_div2 = document.getElementById("div2");
-    var el_div3 = document.getElementById("div3");
-    var el_div4 = document.getElementById("div4");
-    var el_div5 = document.getElementById("div5");
     el_workout.style.cssText = "";
     onresize = function() {
     docWidth = document.documentElement.clientWidth;
@@ -55,11 +51,6 @@
 
      let d1=767, f1=10/182, y4= Math.trunc(f1*(x-d1));
      root.style.setProperty('--margin-left-VAR', y4+'%');
-
-     el_div2.innerHTML=Math.trunc(y4);
-     el_div3.innerHTML=(Math.trunc(y3)) +'%';
-     
-     el_div5.innerHTML=Math.trunc(n);
   }
   else if (docWidth>1124) {
     el_left.style.height ='850px';
@@ -69,7 +60,6 @@
     el_p1.style.fontSize=40 +'px';
     el_img.style.width =132+'%';
     el_con_inf.style.marginTop = 13 + "%";
-    el_div4.innerHTML=docWidth;
 }
 else if (docWidth<750) {
   [...document.getElementsByClassName('div5')].forEach(
