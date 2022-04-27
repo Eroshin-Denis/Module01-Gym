@@ -46,7 +46,25 @@ nav {
     font-weight: normal;
     font-size: 18px;
     color: #2B3541;
-    text-decoration: none;                       
+    text-decoration: none;   
+    position: relative;                  
+}
+.header-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: transparent;
+    background: #2B3541; 
+    border-radius: 1.5px;
+    display: block; 
+    opacity: 0.7;
+    transition: 4s; 
+}
+.header-nav a:hover::after {
+    background: #FBB731;
+    width: 95%;
+    transition: 1s; 
 }
 .head-btn {
     flex-basis: 12%;   /*начало элемена флекс nav*/
@@ -56,9 +74,18 @@ nav {
 }
 .Instagramicon {float: left;} .Feisbukicon {float: right;}
 .Instagramicon,.Feisbukicon {
+width: 40px;
+height: 50px;
 border: none;
 cursor: pointer;
 background-color: transparent;
+}
+.Instagramicon img,.Feisbukicon img {
+width: 100%;
+transition: 1s;
+}
+.Instagramicon:hover img, .Feisbukicon:hover img {
+    width: 150%;
 }
 /* блок майн с девушкой  *//* блок майн с девушкой  *//* блок майн с девушкой  */
  .main .container {
@@ -177,17 +204,24 @@ background-color: transparent;
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    gap: 3px;
 }
 .menu-flex-cover {
     position: relative;
     max-width: 367px;
-    min-width: 300px;
+    min-width: 140px;
     height: 600px;
     flex: 1 1 32%;
+    background-position: center 0;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
 }
+.break {
+    display: none;
+    flex-basis: 100%;
+    height: 0;
+  }
 .menu-flex-cover:hover p:nth-child(3) {
     display: inline-block;
 }
@@ -220,17 +254,24 @@ background-color: transparent;
     transition: 1s;
 }
 .menu-flex-cover p:nth-child(4) {
+    position: absolute;
     display: inline-block;
     font-weight: 400;
     font-size: 18px;
     color: #2B3541;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     text-align: center;
     padding: 12px 20px;
-    background: #FBF138;
-    float: right; 
-    margin-top: 104%; 
-    margin-bottom: 0;
+    background: #FBF138; 
+    bottom: 0;
+    right: 0;
+    margin: 0;
+}
+.menu-flex-cover img:nth-child(5) {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    right: 0;
 }
 #id_div1 {background-image: url("../images/menu/01.png");}  
 #id_div2  {background-image: url(../images/menu/02.jpg);}
@@ -239,11 +280,9 @@ background-color: transparent;
 #id_div2:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/02.jpg");}
 #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/03.jpg");}
 /*блок деталей*//*блок деталей*//*блок деталей*/
-.workout-header {
-}
 .p1 {
     display: inline-block;
-    width: 350px;
+    width: min-content;
     font-weight: 700;
     font-size: 40px;
     color: #2B3541;
@@ -258,28 +297,37 @@ background-color: transparent;
     color: #2B3541;  
     margin: 40px 0;
 }
+.teg {
+
+}
 .workout  {
     display: flex;
     flex-flow: column wrap;
-    align-content: space-between;
+    /* align-content: space-between;   */
     height: 728px;
-    justify-content: space-between;
+    /* justify-content: space-between;  */
     margin-bottom: 140px;
+    gap: 20px;
+  
 }
 .workout div {
     border: 3px solid gray;
     max-width: 367px;
-    width: 100%;
+    min-width: 0;
     position: relative;
     overflow: hidden;
+    /* flex-shrink: 3; */
+    flex: 1 3 auto;
 }
 .workout div p:nth-child(1) {
     font-weight: 400;
     font-size: 18px;
     color: #010101;
     opacity: 0.7;
-    width: 45%;
+    width: 85%;
     float: right; 
+    text-align: end;
+    padding-right: 5%;
 }
 .workout div img {
    position: absolute;
@@ -301,7 +349,7 @@ background-color: transparent;
     font-weight: 400;
     font-size: 18px;
     color: #2B3541;
-    bottom: -25%;
+    bottom: -45%;
     left: 10%;
     transition: 1s;
  }
@@ -353,11 +401,12 @@ background-color: transparent;
     display: flex;
 }
 .wrap {
-    width: 740px;
+    width: 340px;
     margin: auto auto;
 }
 .e-mail-title {
     display: flex;
+    margin: 0 auto;
 }
 .e-mail-title img {
     width: 123px; 
@@ -384,7 +433,7 @@ background-color: transparent;
   margin: 0;
 }
 .e-mail-enter input {
-    width: 330px;
+    width: 340px;
     height: 65px;
     background: #ffffff;
     font-weight: 400;
@@ -425,14 +474,12 @@ background-color: transparent;
 /* Блок о компании */ /* Блок о компании */ /* Блок о компании */
 .company-grid {
     display: grid;
-    grid-template-columns: 291px 291px 291px 291px;
-    grid-template-rows: 335px 335px;
-    justify-content: space-between;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
     margin-bottom: 10px;
 }
-.company-grid div:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+.company-grid div:nth-child(-n+2) {
+    grid-column: span 2;
 }
 .company-grid div:nth-child(1) p:nth-child(1) {
     font-weight: 700;
@@ -458,14 +505,17 @@ background-color: transparent;
     border: none;
     cursor: pointer;
 }
+.company-grid div:nth-child(6)  button {
+    display: none;
+    }
 .company-grid div:nth-child(2) {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    justify-self: end;
     background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
+    height: fit-content;
 }
 .company-grid div:nth-child(2) img {
+    width: 100%;
     opacity: 0.7;
+    box-shadow: 0px 4px 0px 0px #ffffff;
 }
 .company-grid div:nth-child(n+3) p:nth-child(1) {
     font-weight: 700;
@@ -482,18 +532,28 @@ background-color: transparent;
     opacity: 0.6;
 }
 .company-grid div:nth-child(n+4) {
-    margin-left: auto;
+    justify-self: end;
 }
 /*Блок подвала */ /*Блок подвала*/ /*Блок подвала*/ /*Блок подвала*/
 footer {
     background: #F3F3F3;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 5px;
     height: 100%;
  }
- footer nav {
-    
+ .header-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+ }
+ .header-one .header-nav {
+    justify-content: flex-end;
 }
+ footer .header-item {
+     height: 60px;
+     margin-bottom: 5px;
+ }
 footer .header-nav a {
     font-size: 14px;                
 }
@@ -503,15 +563,18 @@ footer .header-nav a {
     color: #2B3541;
      z-index: 1; 
 }
-.e-mail-fit-circle {
-    position: relative;
-    width: 25px; 
+.e-mail-fit::before {
+    content: '';
+    position: relative; 
+    width: 25px;
     height: 25px;
     background: #FBF138;
     border-radius: 50%;
-    left: 20px;
-    bottom: 12px;
-    z-index: 0; 
+    display: block; 
+    top: -12px;
+    left: 8px; 
+    float: left;
+    z-index: -1; 
 }
 footer .head-btn {
     justify-content: center;
@@ -527,13 +590,21 @@ footer .head-btn {
     font-size: 14px;
     color: rgba(43, 53, 65, 0.3);
 }
+.footer-row a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #2B3541;
+    opacity: 0.3;
+}
 @media (max-width: 1140px) {
     .content-title {
         margin-top: 0%;
     }
-    /* .content-info {
-        margin-top: 56%;
-    } */
+}
+@media (max-width: 1058px) {
+    .company-grid div:nth-child(n+3) {
+        width: min-content;
+    }
 }
 @media (max-width: 960px) {
     .visual-bg-left {
@@ -543,8 +614,25 @@ footer .head-btn {
         left:  auto; 
         right: 0%;
     }
+    .header-nav {
+        padding-left: 5%;
+        gap: 3%;
+    }    
 }
 @media (max-width: 769px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .p1 { /*Расписание тренировок*/
+        font-size: 28px;
+    }
+    .p2 {
+        padding-top: 10px;
+        height: 50px;
+        font-size: 16px;
+        margin: 28px 0;
+    }
     .header-fitness {
         display: block;
         flex-basis: 60%;
@@ -560,9 +648,6 @@ footer .head-btn {
     }
     nav { 
         display: none;
-    }
-    .Instagramicon img,.Feisbukicon img {
-        width: 30px; 
     }
     .content-title {
         font-size: 26px;
@@ -582,4 +667,187 @@ footer .head-btn {
     .visual-bg img {
         width: 97%; 
     }
-}
+    .menu-flex {
+        flex-wrap: wrap;
+    }
+    .break {
+        display: block;
+      }
+    #id_div1,#id_div2 {height: 309px;}
+    #id_div3  {background-image: url(../images/yoga.png);   flex-grow: 1;  max-width: 745px;  }
+    #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/yoga.png");}
+    .menu-flex-cover p:nth-child(4) {
+        right: auto;
+    }
+    .menu-flex-cover img:nth-child(5) {        
+        display: block;    
+    }
+    /* Расписание тренировок */
+    .workout {
+        display: flex;
+        flex-flow: row wrap;
+        height: 820px;
+        gap: 20px; 
+    }
+    .workout div p:nth-child(3) {
+        bottom: 4%;
+     }
+     .workout div p:nth-child(4) {
+        bottom: -65%;
+     }
+    .workout  div {
+        flex-basis: 35%;
+    }
+    .part1,.part4 {
+        order: 0;
+        height: 332px; 
+    }
+    .part2,.part5 {
+        order: 1;
+        height: 224px;
+    }
+    .part3,.part6 {
+        height: 224px;
+    }
+    /*Подписка*/
+    .wrap {
+        width: 340px;
+        height: 80%;
+        margin: auto auto;
+        position: relative;
+    }
+    .e-mail-title p {
+       margin: 20px 0;
+    }
+    .e-mail-enter {
+        display: inline-block;
+        padding-left: 0%;
+        gap: 0px;
+    }
+    .e-mail-enter p:nth-child(2) {
+        position: absolute;
+        margin: 0 auto;
+        bottom: 0%;
+        padding: 24px 105px;
+    }
+    .e-mail {
+        height: 416px;
+        margin-bottom: 80px;
+    }
+    .e-mail-enter input {
+        padding-left: 0%;
+    }
+    .e-mail-jackdaw {
+        padding-left: 0;
+    }
+    input::placeholder {
+        padding-left: 10%;
+      }
+    /* О компании */
+    .company-grid {
+        grid-template-rows: 1fr 0.5fr 0.8fr;
+    }
+    .company-grid div:nth-child(n+3) {
+        grid-column: span 2;
+        width: max-content;
+        justify-self: center;
+        align-self: start;
+    }
+    /* Подвал */ /* Подвал */ /* Подвал */ /* Подвал */ /* Подвал */
+    .header-one {
+        display: flex;
+     }
+    .header-one nav {
+        display: block;
+    }
+    .e-mail-fit {
+        margin-left: auto;
+    }
+    footer .header-item .header-logo {
+        display: none;
+    }
+    .header-one {
+     padding-top: 40px;
+     }
+    }
+    @media (max-width: 530px) {
+    .company-grid { /*О компании*/
+        grid-template-rows: 1fr 0.3fr 0.3fr 0.3fr 0.8fr 0.9fr;
+        grid-template-columns: 1fr;
+        }
+    .company-grid div:nth-child(2) {
+        order: 2;
+        }
+    .company-grid div:nth-child(n+3) p:nth-child(1) {
+            margin-top: 15px;
+            margin-bottom: 0px;
+    }
+    .company-grid div:nth-child(1) button:nth-child(3) {
+            display: none;
+        }
+    .company-grid div:nth-child(-n+6)   {
+        width: 100%;
+    } 
+    .company-grid div:nth-child(6)  button {
+        display: block;
+        background-color: #FBF138;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #2B3541;
+        padding: 22px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        background-color: #FBF138;
+        }
+    }
+    @media (max-width: 470px) {
+    .header-nav { /*Подвал*/
+            padding-left: 0;
+            gap: 1%;
+    }    
+    footer .header-nav a {   
+            font-size: 12px;
+    }      
+    ul {
+            padding-inline-start: 0px;
+    }
+    .p1 {  /*Тренировки*/
+            width: min-content;
+    }
+    .workout {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .workout div {
+        height: 134px;
+    }
+    .workout div img:nth-child(2) {
+        transform: scale(0.6);
+    }
+    .header-one {    /*подвал*/
+                flex-direction: column;  
+    }
+    .footer-row  {
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+    } 
+    .footer-row p {        
+                    font-size: 10px;
+    }
+    .footer-row a {
+                    font-size: 10px;       
+    }      
+    @media (max-width: 320px) {
+    .p2 {
+                display: block;
+                float: left;   
+                margin: 0;
+                padding: 0;           
+    }
+    .workout-header {
+           height: 175px;
+    }
+    
