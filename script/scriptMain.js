@@ -77,6 +77,12 @@ function resizeFont(div, width, height, size)
     else if (docRatio > ratio) elem.style.fontSize = width * size / 14062 + 'vh';
 }
 onresize();
+function openModal() {
+  document.getElementById("modal").style.top="20px";
+  }
+function closeModal() {
+   document.getElementById("modal").style.top ="-260px";
+  }
 
 
 
