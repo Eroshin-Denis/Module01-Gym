@@ -106,7 +106,7 @@ transition: 1s;
     color: #2B3541;
     text-transform: uppercase;   /*Заглавные буквы*/
     margin-top: 53%;
-    /* margin-left: 29%; */
+   z-index: 2;
 }
 .content-title span {
     display: block;
@@ -128,6 +128,9 @@ transition: 1s;
     margin-top: 0;
     margin-left: var(--margin-left-VAR); 
     margin-bottom: 14%;
+    z-index: 7;
+    position: -webkit-sticky;
+    position: sticky;
 }
 .content-text span {
     display: block;
@@ -143,6 +146,13 @@ transition: 1s;
     text-transform: uppercase;   /*Заглавные буквы*/
     background: #FBF138;
     padding: 20px 30px;
+    z-index: 1;
+    position: inherit;
+    transition: 1s;
+}
+.content-link:hover {
+    background-color: #2B3541;
+    color: #FBF138;
 }
 .div-button-up {
    bottom: 0%;
@@ -171,6 +181,7 @@ transition: 1s;
     background-image: url(../images/fon-left.png);
     background-size: cover; 
     background-position: center center;
+    z-index: -20;
  }
  .visual-bg-right {
     position: relative;
@@ -179,6 +190,7 @@ transition: 1s;
     background-image: url(../images/fon-right.png);
     background-size: cover; 
     background-position: center center;
+    z-index: -30;
  }
 .visual-bg img {
     position: absolute;
@@ -275,13 +287,15 @@ transition: 1s;
 }
 #id_div1 {background-image: url("../images/menu/01.png");}  
 #id_div2  {background-image: url(../images/menu/02.jpg);}
-#id_div3  {background-image: url(../images/menu/03.jpg);}
+#id_div3  {background-image: url(../images/menu/03.jpg); background-position: right;}
 #id_div1:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/01.png");}
 #id_div2:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/02.jpg");}
 #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/03.jpg");}
 /*блок деталей*//*блок деталей*//*блок деталей*/
 .p1 {
     display: inline-block;
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
     font-weight: 700;
     font-size: 40px;
@@ -297,18 +311,12 @@ transition: 1s;
     color: #2B3541;  
     margin: 40px 0;
 }
-.teg {
-
-}
 .workout  {
     display: flex;
     flex-flow: column wrap;
-    /* align-content: space-between;   */
     height: 728px;
-    /* justify-content: space-between;  */
     margin-bottom: 140px;
     gap: 20px;
-  
 }
 .workout div {
     border: 3px solid gray;
@@ -316,7 +324,6 @@ transition: 1s;
     min-width: 0;
     position: relative;
     overflow: hidden;
-    /* flex-shrink: 3; */
     flex: 1 3 auto;
 }
 .workout div p:nth-child(1) {
@@ -401,32 +408,44 @@ transition: 1s;
     display: flex;
 }
 .wrap {
-    width: 340px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin: auto auto;
+    position: relative;
 }
 .e-mail-title {
     display: flex;
     margin: 0 auto;
 }
-.e-mail-title img {
-    width: 123px; 
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-}
 .e-mail-title p {
     font-weight: 700;
     font-size: 40px;
     color: #2B3541;
-    text-align: left;
-    position: relative; 
+    position: -webkit-sticky;
+    position: sticky; 
+    text-align: center;
     flex: 1 0 25%;
-    left: -50px;
     align-self: center;
+    z-index: 1;
+}
+.e-mail-title p::before {
+    content: '';
+    position: absolute; 
+    width: 45px;
+    height: 45px;
+    background: #FBF138;
+    border-radius: 50%;
+    display: block; 
+    top: -15px;
+    left: -5px;
+    z-index: -1; 
 }
 .e-mail-enter {
     display: flex;
-    padding-left: 10%;
     gap: 45px;
 }
 .e-mail-enter p{
@@ -440,7 +459,6 @@ transition: 1s;
     font-size: 18px;
     color: #2B3541;
     text-align: left;
-    padding-left: 10%;
 }
 .e-mail-enter p:nth-child(2) {
     display: inline-block;
@@ -451,17 +469,28 @@ transition: 1s;
     align-self: center;
     padding: 24px 45px;
     background-color: #FBF138;
+    transition: 1s;
+}
+.e-mail-enter p:nth-child(2):hover {
+    color: #FBF138;
+    background-color: #2B3541;
 }
 .e-mail-jackdaw {
     display: flex;
     padding-bottom: 38px;
-    padding-left: 10%;
+}
+.e-mail-jackdaw img {
+    cursor: pointer;
+}
+#id_img1 {
+    display: none;
 }
 .e-mail-jackdaw p {
     margin-left: 5px;
     font-weight: 400;
     font-size: 11px;
     color: #2B3541;
+    background-color: var(--V3);
     text-align: center;
     opacity: 0.5;
 }
@@ -504,12 +533,22 @@ transition: 1s;
     padding: 22px 50px;
     border: none;
     cursor: pointer;
+    transition: 1s;
+}
+.company-grid div button:nth-child(3) {
+    transition: 1s;
+}
+.company-grid div button:nth-child(3):hover {
+    background-color:#2B3541;
+    color: #FBF138;
 }
 .company-grid div:nth-child(6)  button {
     display: none;
     }
 .company-grid div:nth-child(2) {
     background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 .company-grid div:nth-child(2) img {
@@ -561,19 +600,19 @@ footer .header-nav a {
     font-weight: 700;
     font-size: 16px;
     color: #2B3541;
+    position: relative;
      z-index: 1; 
 }
 .e-mail-fit::before {
     content: '';
-    position: relative; 
+    position: absolute; 
     width: 25px;
     height: 25px;
     background: #FBF138;
     border-radius: 50%;
     display: block; 
     top: -12px;
-    left: 8px; 
-    float: left;
+    left: -16px; 
     z-index: -1; 
 }
 footer .head-btn {
@@ -610,6 +649,7 @@ footer .head-btn {
     top: 30px;
     text-align: left;    
     transition: 0.5s;
+    z-index: 30;
 }
 .modal .header-logo {
     position: absolute;
@@ -653,6 +693,14 @@ footer .head-btn {
     gap: 5%;
     margin-right: 5%;
 }
+.modal-box {
+    display: none;
+    margin-top: 8px;
+    width: 100%;
+    height: 135px;
+    background: #2B3541;
+    opacity: 0.4;
+}
 
 @media (max-width: 1140px) {
     .content-title {
@@ -661,6 +709,8 @@ footer .head-btn {
 }
 @media (max-width: 1058px) {
     .company-grid div:nth-child(n+3) {
+        width: -webkit-min-content;
+        width: -moz-min-content;
         width: min-content;
     }
 }
@@ -798,6 +848,18 @@ footer .head-btn {
     .e-mail-jackdaw {
         padding-left: 0;
     }
+    input::-webkit-input-placeholder {
+        padding-left: 10%;
+      }
+    input::-moz-placeholder {
+        padding-left: 10%;
+      }
+    input:-ms-input-placeholder {
+        padding-left: 10%;
+      }
+    input::-ms-input-placeholder {
+        padding-left: 10%;
+      }
     input::placeholder {
         padding-left: 10%;
       }
@@ -807,6 +869,8 @@ footer .head-btn {
     }
     .company-grid div:nth-child(n+3) {
         grid-column: span 2;
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
         justify-self: center;
         align-self: start;
@@ -832,6 +896,8 @@ footer .head-btn {
     }
     }
     @media (max-width: 530px) {
+    #id_div3  {background-position: 75%; } /*Меню*/
+    #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/yoga.png");}
     .company-grid { /*О компании*/
         grid-template-rows: 1fr 0.3fr 0.3fr 0.3fr 0.8fr 0.9fr;
         grid-template-columns: 1fr;
@@ -872,20 +938,36 @@ footer .head-btn {
             font-size: 12px;
     }      
     ul {
-            padding-inline-start: 0px;
+            -webkit-padding-start: 0px;
+                    padding-inline-start: 0px;
     }
     .p1 {  /*Тренировки*/
+            width: -webkit-min-content;
+            width: -moz-min-content;
             width: min-content;
     }
     .workout {
         flex-wrap: nowrap;
         flex-direction: column;
+        height: auto;
+        margin-bottom: 60px;
+        --S: hidden;
+        transition: 1s;
     }
     .workout div {
-        height: 134px;
+        flex: 0 0 auto;
+        height: 94px;
+        transition: 1s;
     }
     .workout div img:nth-child(2) {
         transform: scale(0.6);
+    }
+    .workout div p:nth-child(4) {
+        visibility: var(--S);
+     }
+    .workout div:hover {
+        height: 268px;
+        --S: visible;
     }
     .header-one {    /*подвал*/
                 flex-direction: column;  
@@ -912,3 +994,4 @@ footer .head-btn {
            height: 175px;
     }
     
+}}

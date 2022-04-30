@@ -81,9 +81,15 @@ function openModal() {
   document.getElementById("modal").style.top="20px";
   }
 function closeModal() {
-   document.getElementById("modal").style.top ="-260px";
+   document.getElementById("modal").style.top ="-460px";
   }
-
-
+function openBox() {
+  document.getElementById("id_img1").style.display = 'block';
+  document.getElementById("id_img2").style.display = 'none';
+}
+function closeBox() {
+  document.getElementById("id_img2").style.display = 'block';
+  document.getElementById("id_img1").style.display = 'none';
+}
 
 

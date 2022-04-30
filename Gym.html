@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     
@@ -7,7 +7,15 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+      <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png">
+      <link rel="apple-touch-icon" sizes="192x192" href="/images/favicon/android-chrome-192x192.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+      <link rel="icon" sizes="16x16" href="/images/favicon/favicon.ico">
+      <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
       <link rel="stylesheet" href="styles/normalize.css">
       <link rel="stylesheet" href="styles/gym.css">
 </head>
@@ -53,8 +61,8 @@
                     <a class="content-link" href="#">Узнать&nbspподробнее</a>
                     <div class="div-button-up">
                         <button href="#menuFitness" class="button-up">
-                    </div>
-                    </button>
+                        </button>
+                    </div>    
                 </div>
                 <div class="visual">
                     <div class="visual-bg">
@@ -76,14 +84,14 @@
                     <div class="menu-flex-cover" id="id_div1">
                         <p>29.06 - 4.07</p>
                         <p>Марафон выносливости</p>
-                        <p>Учавствовать</p>                                            
+                        <p>Участвовать</p>                                            
                         <p>марафон</p>
                         <img src="images/icons/BlackKey.svg" alt="Кнопочка">
                     </div>
                     <div class="menu-flex-cover" id="id_div2">
                         <p>29.06 - 4.07</p>
                         <p>Как стать <br> тренером?</p>
-                        <p>Учавствовать</p>                                            
+                        <p>Участвовать</p>                                            
                         <p>вебинар</p>
                         <img src="images/icons/BlackKey.svg" alt="Кнопочка">
                     </div>
@@ -91,7 +99,7 @@
                     <div class="menu-flex-cover" id="id_div3">
                         <p>29.06 - 4.07</p>
                         <p>Йога, как стиль жизни</p>
-                        <p>Учавствовать</p>                                            
+                        <p>Участвовать</p>                                            
                         <p>вебинар</p>
                         <img src="images/icons/BlackKey.svg" alt="Кнопочка">
                     </div>
@@ -149,20 +157,19 @@
                 <div class="e-mail">
                     <div class="wrap">
                         <div class="e-mail-title">
-                            <img src="images/Pattern.png" alt="Круг">
                             <p>Подпишитесь на рассылку</p></div>
                             <form class="e-mail-enter" action="/example/handler.php">
                                 <p><input placeholder="Ваш e-mail" name="login"></p>
                                 <p>ПОДПИСАТЬСЯ</p>
                             </form>
                         <div class="e-mail-jackdaw">
-                            <img src="images/check_box.svg" alt="Галка">
+                            <img id="id_img1" onclick="closeBox()" src="images/check_box.svg" alt="Галка">
+                            <img id="id_img2" onclick="openBox()" src="images/icons/check box empty.svg" alt="Квадрат">
                             <p>Согласен с обработкой <a href="#">персональных данных</a></p></div>
                     </div>    
                 </div>
             </div>
         </section>
-
         <summary>
             <div class="container">
                 <div class="company">
@@ -238,6 +245,7 @@
                         <img src="images/Feisbukicon.svg" alt="Фейсбук">
                 </button>
             </div>
+            <div class="modal-box"></div>
         </div>
               <address hidden>
                 Этот партал зделан сабствинаручно веб-дизайнером Денисом Ерошиным в праграме 
