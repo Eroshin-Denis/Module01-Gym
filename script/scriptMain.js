@@ -10,6 +10,27 @@
              behavior: "smooth"
              });
              }
+                     // Button Up переход вверх
+        window.onscroll=function(){scrollFunction()};
+        const upbuttons=document.querySelectorAll(".button-top");
+        for (const upbutton of upbuttons) {
+            upbutton.addEventListener("click", clickHandler);
+        }
+        function clickHandler(e) {
+             e.preventDefault();
+             const href=this.getAttribute("href");
+             document.querySelector(href).scrollIntoView({
+              behavior:"smooth"
+        });
+        }
+        function scrollFunction(){
+            if ( document.body.scrollTop >1000 || document.documentElement.scrollTop > 1000){   
+                
+                document.getElementById("btnUp").className="button-top visible";
+            } else {
+                 document.getElementById('btnUp').className ='button-top hidden';
+            }
+        }
     //блок майн
     var docWidth, ratiox, y, b, k, docHeight, docRatio, div11 = document.getElementsByClassName('main')[0];
     let el_left=document.getElementsByClassName('visual')[0];

@@ -166,6 +166,33 @@ transition: 1s;
     cursor: pointer;
     background-color: transparent;
 }
+.button-top {
+    width: 52px;
+    height: 55px;
+    background-image: url(../images/icons/Arrow.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+    transform: scaleY(-1);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: 1s;
+    }
+    .button-top:hover {
+        background-color: #FBF138;
+        background-size: 95%;
+    }
+    .button-top.hidden {
+        display: none;
+    }
+    .button-top.visible {
+        display: inline;
+    }
 .visual {
     max-height: 850px;
     flex: 1 0 auto;
