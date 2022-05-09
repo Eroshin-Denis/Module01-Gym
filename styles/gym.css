@@ -78,8 +78,7 @@ width: 40px;
 height: 50px;
 border: none;
 cursor: pointer;
-background-color: #FBF138;
-/* background-color: transparent; */
+background-color: transparent;
 }
 .Instagramicon img,.Facebookicon img {
 width: 100%;
@@ -168,9 +167,9 @@ transition: 0.5s;
     background-color: transparent;
 }
 .button-top {
-    width: 52px;
-    height: 55px;
-    background-image: url(../images/icons/Arrow.svg);
+    width: 62px;
+    height: 64px;
+    background-image: url(../images/icons/Arrow-up4.svg);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -178,7 +177,6 @@ transition: 0.5s;
     cursor: pointer;
     background-color: transparent;
     border-radius: 50%;
-    transform: scaleY(-1);
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -186,7 +184,7 @@ transition: 0.5s;
     }
     .button-top:hover {
         background-color: #FBF138;
-        background-size: 95%;
+        background-size: 92%;
     }
     .button-top.hidden {
         display: none;
@@ -262,8 +260,8 @@ transition: 0.5s;
     flex-basis: 100%;
     height: 0;
   }
-.menu-flex-cover:hover p:nth-child(3) {
-    display: inline-block;
+.menu-flex-cover:hover button:nth-child(3) {
+    display: block;
 }
 .menu-flex-cover p {
     margin-left: 30px;
@@ -281,7 +279,7 @@ transition: 0.5s;
     color: #2B3541;
     margin-top: 25px;
 }
-.menu-flex-cover p:nth-child(3) {
+.menu-flex-cover button:nth-child(3) {
     position: absolute;
     display: none;
     font-weight: 700;
@@ -292,6 +290,16 @@ transition: 0.5s;
     padding: 20px 37px;
     background: #2B3541;
     transition: 0.5s;
+    border: 1px solid #2B3541;
+    cursor: pointer;
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+.menu-flex-cover button:nth-child(3):hover {
+    color: #2B3541;
+    background:  rgba(0, 255, 0, .5);
+    transition: 0.5s;
+    border: 1px solid #FBF138;
 }
 .menu-flex-cover p:nth-child(4) {
     position: absolute;
@@ -299,7 +307,6 @@ transition: 0.5s;
     font-weight: 400;
     font-size: 18px;
     color: #2B3541;
-    /* margin-top: 25px; */
     text-align: center;
     padding: 12px 20px;
     background: #FBF138; 
@@ -387,6 +394,7 @@ transition: 0.5s;
     bottom: -45%;
     left: 10%;
     transition: 0.5s;
+    
  }
 .workout div:hover img:nth-child(2) {bottom: 60%;}
 .workout div:hover p:nth-child(3) {bottom: 40%;}
@@ -498,6 +506,7 @@ transition: 0.5s;
     padding: 24px 45px;
     background-color: #FBF138;
     transition: 0.5s;
+    cursor: pointer;
 }
 .e-mail-enter p:nth-child(2):hover {
     color: #FBF138;
@@ -507,11 +516,23 @@ transition: 0.5s;
     display: flex;
     padding-bottom: 38px;
 }
-.e-mail-jackdaw img {
-    cursor: pointer;
+.e-mail-jackdaw .checkbox {
+    appearance: none;
+    display: inline-block;
+	width: 25px;
+	height: 22px;
+	margin: 6px 5px 0 3px;
+	outline: none;
+    outline: #666 solid 3px; /* Параметры рамки */
+	transition: 0.3s ease;
+	cursor: pointer;
+    opacity: .5;
 }
-#id_img1 {
-    display: none;
+.checkbox:checked {
+    background-image: url(../images/icons/check_box.svg);
+    background-repeat: no-repeat;  
+    background-size: 100%;
+    opacity: 1;
 }
 .e-mail-jackdaw p {
     margin-left: 5px;
@@ -527,6 +548,9 @@ transition: 0.5s;
     font-size: 11px;
     color: #2B3541;
     opacity: 0.5;
+}
+.e-mail-jackdaw a:hover {
+    opacity: 1;
 }
 /* Блок о компании */ /* Блок о компании */ /* Блок о компании */
 .company-grid {
@@ -629,7 +653,8 @@ footer .header-nav a {
     font-size: 16px;
     color: #2B3541;
     position: relative;
-     z-index: 1; 
+     z-index: 1;
+     cursor: pointer; 
 }
 .e-mail-fit::before {
     content: '';
