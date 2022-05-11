@@ -1,5 +1,5 @@
 ﻿             // Медленный скрол
-             const links = document.querySelectorAll(".button-up");
+             const links = document.querySelectorAll(".up");
              for (const link of links) {
                  link.addEventListener("click", clickHandler);
              }
@@ -104,13 +104,20 @@ function openModal() {
 function closeModal() {
    document.getElementById("modal").style.top ="-460px";
   }
-function openBox() {
-  document.getElementById("id_img1").style.display = 'block';
-  document.getElementById("id_img2").style.display = 'none';
+function openInstagram() {
+  window.open("https://instagram-my.ru");  
 }
-function closeBox() {
-  document.getElementById("id_img2").style.display = 'block';
-  document.getElementById("id_img1").style.display = 'none';
+function openFacebook() {
+  window.open("https://youtu.be/ueD8tLcNVSQ");
 }
+function openEmail() {
+  window.open("mailto:info@freefit.com");
+}
+        //Modal Registration
 
-
+      function openModalReg() {
+          document.getElementById("modal-reg").style.display = "block";
+      }
+      function closeModalReg() {
+          document.getElementById("modal-reg").style.display = "none";
+      }

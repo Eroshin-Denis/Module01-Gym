@@ -167,6 +167,7 @@ transition: 0.5s;
     background-color: transparent;
 }
 .button-top {
+    display: none;
     width: 62px;
     height: 64px;
     background-image: url(../images/icons/Arrow-up4.svg);
@@ -261,7 +262,7 @@ transition: 0.5s;
     height: 0;
   }
 .menu-flex-cover:hover button:nth-child(3) {
-    display: block;
+    opacity: 1;
 }
 .menu-flex-cover p {
     margin-left: 30px;
@@ -281,7 +282,6 @@ transition: 0.5s;
 }
 .menu-flex-cover button:nth-child(3) {
     position: absolute;
-    display: none;
     font-weight: 700;
     font-size: 16px;
     color: #FBF138;
@@ -294,12 +294,13 @@ transition: 0.5s;
     cursor: pointer;
     left: 50%;
     transform: translate(-50%, 10%);
+    opacity: 0;
 }
 .menu-flex-cover button:nth-child(3):hover {
     color: #2B3541;
-    background:  rgba(0, 255, 0, .5);
+    background:  rgba(251, 241, 56, .5);
     transition: 0.5s;
-    border: 1px solid #FBF138;
+    border: 1px solid #fbf138;
 }
 .menu-flex-cover p:nth-child(4) {
     position: absolute;
@@ -320,12 +321,12 @@ transition: 0.5s;
     bottom: 0;
     right: 0;
 }
-#id_div1 {background-image: url("../images/menu/01.png");}  
-#id_div2  {background-image: url(../images/menu/02.jpg);}
-#id_div3  {background-image: url(../images/menu/03.jpg); background-position: right;}
-#id_div1:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/01.png");}
-#id_div2:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/02.jpg");}
-#id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/03.jpg");}
+#id_div1 {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/01.png");}  
+#id_div2 {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/02.jpg");}
+#id_div3 {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/03.jpg"); background-position: right;}
+#id_div1:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/01.png");}
+#id_div2:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/02.jpg");}
+#id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, 0) 100%), url("../images/menu/03.jpg");}
 /*блок деталей*//*блок деталей*//*блок деталей*/
 .p1 {
     display: inline-block;
@@ -351,54 +352,62 @@ transition: 0.5s;
     flex-flow: column wrap;
     height: 728px;
     margin-bottom: 140px;
-    gap: 20px;
+    gap: 1.6%;
 }
 .workout div {
     border: 3px solid gray;
     max-width: 367px;
     min-width: 0;
-    position: relative;
+    position: sticky;
     overflow: hidden;
-    flex: 1 3 auto;
+    flex-grow: 1;
+    flex-shrink: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 31.6%;
 }
 .workout div p:nth-child(1) {
+    position: absolute;
+    top: 0;
     font-weight: 400;
     font-size: 18px;
     color: #010101;
     opacity: 0.7;
     width: 85%;
-    float: right; 
+    right: 0;
     text-align: end;
     padding-right: 5%;
 }
 .workout div img {
-   position: absolute;
-   bottom: 30%;
-   left: 10%;
+   width: fit-content;
+   object-fit: none;
    transition: 0.5s;
+   margin-left: 10%;
+   margin-top: 30%;
 }
 .workout div p:nth-child(3) {
-   position: absolute;
    font-weight: 700;
    font-size: 18px;
    color: #2B3541; 
-   bottom: 10%;
-   left: 10%;
    transition: 0.5s;
+   margin-left: 10%;
 }
 .workout div p:nth-child(4) {
-    position: absolute;
     font-weight: 400;
     font-size: 18px;
     color: #2B3541;
-    bottom: -45%;
-    left: 10%;
-    transition: 0.5s;
-    
+    transition: 1s;
+    margin: 0 2%;
+    margin-left: 10%;
+    position: absolute;
+    top: -105%;
+    opacity: 0;
  }
-.workout div:hover img:nth-child(2) {bottom: 60%;}
-.workout div:hover p:nth-child(3) {bottom: 40%;}
-.workout div:hover p:nth-child(4) {bottom: 5%;}
+.workout div:hover img:nth-child(2) {margin-top: 0;}
+.workout div:hover p:nth-child(4) {position: inherit; opacity: 1;}
+.workout div:nth-child(4) img:nth-child(2) {margin-top: 0;}
+.workout div:nth-child(4) p:nth-child(4) {position: inherit; opacity: 1;}
 .part1 {
     height: 250px;
     order: 1;
@@ -415,15 +424,6 @@ transition: 0.5s;
     height: 433px;
     order: 2;
     background: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, .2) 100%);
-}
-.part4 img:nth-child(2) {
-    bottom: 60%;
-}
-.workout div.part4 p:nth-child(3) {
-    bottom: 40%;
-}
-.workout div.part4 p:nth-child(4) {
-    bottom: 5%;
 }
 .part5 {
     height: 281px;
@@ -479,13 +479,14 @@ transition: 0.5s;
     top: -15px;
     left: -5px;
     z-index: -1; 
+    box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
 }
 .e-mail-enter {
     display: flex;
     gap: 45px;
 }
-.e-mail-enter p{
-  margin: 0;
+.e-mail-enter p .e-mail-enter input {
+    margin: 0;
 }
 .e-mail-enter input {
     width: 340px;
@@ -494,9 +495,26 @@ transition: 0.5s;
     font-weight: 400;
     font-size: 18px;
     color: #2B3541;
-    text-align: left;
 }
-.e-mail-enter p:nth-child(2) {
+.e-mail-enter input:disabled {
+    border: 1px solid #F3F3F3;
+    background: #F3F3F3;
+ }
+ .e-mail-enter input:focus {
+    border: 2px solid #F3F3F3;
+    outline: 1px solid #F3F3F3;
+ }
+ .e-mail-enter input:invalid {
+    border: 2px solid #AE0303;
+    color: #AE0303;
+ }
+ .e-mail-enter input::placeholder {
+    color: rgba(43, 53, 65, .3);
+    padding-left: 10%;
+  }
+.e-mail-enter button {
+    border: none;
+    background-color: transparent;
     display: inline-block;
     font-weight: 700;
     font-size: 16px;
@@ -508,7 +526,7 @@ transition: 0.5s;
     transition: 0.5s;
     cursor: pointer;
 }
-.e-mail-enter p:nth-child(2):hover {
+.e-mail-enter button:hover {
     color: #FBF138;
     background-color: #2B3541;
 }
@@ -534,7 +552,8 @@ transition: 0.5s;
     background-size: 100%;
     opacity: 1;
 }
-.e-mail-jackdaw p {
+.e-mail-jackdaw label {
+    align-self: center;
     margin-left: 5px;
     font-weight: 400;
     font-size: 11px;
@@ -542,6 +561,7 @@ transition: 0.5s;
     background-color: var(--V3);
     text-align: center;
     opacity: 0.5;
+    cursor:pointer;
 }
 .e-mail-jackdaw a {
     font-weight: 400;
@@ -680,13 +700,16 @@ footer .head-btn {
 .footer-row p {
     font-weight: 400;
     font-size: 14px;
-    color: rgba(43, 53, 65, 0.3);
+    color: #2b35414d;
 }
 .footer-row a {
     font-weight: 400;
     font-size: 14px;
     color: #2B3541;
     opacity: 0.3;
+}
+.footer-row a:hover {
+    opacity: 1;
 }
 /*Modal*/ /*Modal*/ /*Modal*/ /*Modal*/ /*Modal*/
 
@@ -695,11 +718,11 @@ footer .head-btn {
     display: none;
     left: 50%;
     transform: translate(-50%, 0);    /*смещаем блок влево на расстояние, равное половине его ширины*/
-    max-width: 500px;
-    width: 80%;
+    max-width: 800px;
+    width: 100%;
     height: 246px;
     background: #F3F3F3;
-    top: 30px;
+    top: -460px;
     text-align: left;    
     transition: 0.5s;
     z-index: 30;
@@ -707,7 +730,7 @@ footer .head-btn {
 .modal .header-logo {
     position: absolute;
     top: 20px;
-    left: 5%;
+    left: 2%;
 }
 .gym-close {
     position: absolute;
@@ -755,6 +778,115 @@ footer .head-btn {
     opacity: 0.4;
 }
 
+/* Modal - registration */ /* Modal - registration */ /* Modal - registration */
+#modal-reg {
+    position: relative;
+    z-index: 10;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ab;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.modal-reg-box {
+    width: 600px;
+    height: 577px;
+    background: #F3F3F3;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.reg-header {
+    max-width: 410px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.reg_title {
+    font-size: 28px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+.reg_title::before {
+    content: '';
+    width: 53px;
+    height: 53px;
+    border-radius: 100%;
+    background: #FBF138;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    position: absolute;
+    left: 30px;
+    top: -35px;
+    z-index: -1;
+}
+.reg_text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.modal-reg-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.reg-mail [placeholder] {
+    color: rgba(43, 53, 65, .3);
+}
+.reg-mail,
+.reg-tel {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 19px 0 19px 19px;
+    border: none;
+    background: #FFFFFF;
+    align-items: center;
+    outline: none;
+    display: block;
+    margin: 0 auto 20px;
+    width: 96%;
+}   
+.reg-mail:focus,
+.reg-tel:focus {
+    background: #F3F3F3;
+    color: #2B3541;
+    border: 1px solid #FBF138;
+}
+.modal-reg-form button {
+    font-size: 16px;
+    font-weight: 700;
+    background: #FBF138;
+    border: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 20px;
+    margin: 40px auto 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.modal-reg-form button:hover {
+    background: #2B3541;
+    color: #FBF138;
+}
+.reg-close {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url(../images/icons/close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* Responsive  *//* Responsive  *//* Responsive  *//* Responsive  */
 @media (max-width: 1140px) {
     .content-title {
         margin-top: 0%;
@@ -835,8 +967,8 @@ footer .head-btn {
         display: block;
       }
     #id_div1,#id_div2 {height: 309px;}
-    #id_div3  {background-image: url(../images/yoga.png);   flex-grow: 1;  max-width: 745px;  }
-    #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/yoga.png");}
+    #id_div3  {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url(../images/yoga.png);   flex-grow: 1;  max-width: 745px;  }
+    #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, 0) 100%), url("../images/yoga.png");}
     .menu-flex-cover p:nth-child(4) {
         right: auto;
     }
@@ -850,15 +982,6 @@ footer .head-btn {
         height: 820px;
         gap: 20px; 
     }
-    .workout div p:nth-child(3) {
-        bottom: 4%;
-     }
-     .workout div p:nth-child(4) {
-        bottom: -65%;
-     }
-    .workout  div {
-        flex-basis: 35%;
-    }
     .part1,.part4 {
         order: 0;
         height: 332px; 
@@ -869,6 +992,10 @@ footer .head-btn {
     }
     .part3,.part6 {
         height: 224px;
+    }
+    .workout div p:nth-child(3) {
+        margin-top: 0;
+        margin-bottom: 0;
     }
     /*Подписка*/
     .wrap {
@@ -881,11 +1008,11 @@ footer .head-btn {
        margin: 20px 0;
     }
     .e-mail-enter {
-        display: inline-block;
+        display: block;
         padding-left: 0%;
         gap: 0px;
     }
-    .e-mail-enter p:nth-child(2) {
+    .e-mail-enter button {
         position: absolute;
         margin: 0 auto;
         bottom: 0%;
@@ -950,7 +1077,7 @@ footer .head-btn {
     }
     @media (max-width: 530px) {
     #id_div3  {background-position: 75%; } /*Меню*/
-    #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.3) 0%, rgba(253, 249, 182, 0) 100%), url("../images/yoga.png");}
+    #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, 0) 100%), url("../images/yoga.png");}
     .company-grid { /*О компании*/
         grid-template-rows: 1fr 0.3fr 0.3fr 0.3fr 0.8fr 0.9fr;
         grid-template-columns: 1fr;
@@ -981,6 +1108,20 @@ footer .head-btn {
         width: 100%;
         background-color: #FBF138;
         }
+    .modal-reg-box { /* Popup Window */
+        min-width: 0;
+        min-height: 0;
+        width: 98%;
+        }
+    .modal-reg-form {
+        min-width: 0;
+        }
+    .reg-mail,.reg-tel {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        }
     }
     @media (max-width: 470px) {
     .header-nav { /*Подвал*/
@@ -999,6 +1140,7 @@ footer .head-btn {
             width: -moz-min-content;
             width: min-content;
     }
+    /* Расписание тренировок    Расписание тренировок    Расписание тренировок */
     .workout {
         flex-wrap: nowrap;
         flex-direction: column;
@@ -1008,18 +1150,28 @@ footer .head-btn {
         transition: 0.5s;
     }
     .workout div {
+        max-width: 452px;
         flex: 0 0 auto;
         height: 94px;
         transition: 0.5s;
+        width: 100%;
     }
     .workout div img:nth-child(2) {
+        position: absolute;
+        top: 5%;
+        left: 1%;
         transform: scale(0.6);
+        margin-left: 0%;
+        margin-top: 0%;
     }
-    .workout div p:nth-child(4) {
-        visibility: var(--S);
-     }
+    .workout div p:nth-child(3) {
+        margin-left: 20%;
+    }
+     .workout div:nth-child(4) {
+        height: 208px;
+    }
     .workout div:hover {
-        height: 268px;
+        height: 208px;
         --S: visible;
     }
     .header-one {    /*подвал*/
