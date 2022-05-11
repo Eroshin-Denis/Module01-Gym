@@ -32,17 +32,17 @@
                         </div>
                         <nav>
                             <ul class="header-nav">
-                                <li><a href="#">Мероприятия</a></li>
-                                <li><a href="#">Расписание</a></li>
-                                <li><a href="#">О компании</a></li>
+                                <li><a href="#menuFitness" class="up">Мероприятия</a></li>
+                                <li><a href="#id_workout-header" class="up">Расписание</a></li>
+                                <li><a href="#id_company" class="up">О компании</a></li>
                             </ul>
                         </nav>
                         <div class="head-btn">
                             <button type="button" class="Instagramicon">
-                                        <img src="images/Instagramicon.svg" alt="Инстаграм">
+                                        <img src="images/Instagramicon.svg" onclick="openInstagram()" alt="Инстаграм">
                             </button>
                             <button type="button" class="Facebookicon">
-                                    <img src="images/Facebookicon.svg" alt="Факебок">
+                                    <img src="images/Facebookicon.svg" onclick="openFacebook()" alt="Факебок">
                             </button>
                         </div>
                     </div>
@@ -59,9 +59,9 @@
                     </h1>
                     <p class="content-info">>15&nbspтренировок</p>
                     <p class="content-text"><span>в&nbspобласти&nbspспортивной</span> физиологии&nbspи&nbspнутрициологии</p>
-                    <a class="content-link" href="#">Узнать&nbspподробнее</a>
+                    <a class="content-link" onclick="openModalReg()" href="#">Узнать&nbspподробнее</a>
                     <div class="div-button-up">
-                        <button href="#menuFitness" class="button-up">
+                        <button href="#menuFitness" class="button-up up">
                         </button>
                     </div>    
                 </div>
@@ -85,14 +85,14 @@
                     <div class="menu-flex-cover" id="id_div1">
                         <p>29.06 - 4.07</p>
                         <p>Марафон выносливости</p>
-                        <button>Участвовать</button>                                            
+                        <button onclick="openModalReg()">Участвовать</button>                                            
                         <p>марафон</p>
                         <img src="images/icons/BlackKey.svg" alt="Кнопочка">
                     </div>
                     <div class="menu-flex-cover" id="id_div2">
                         <p>29.06 - 4.07</p>
                         <p>Как стать <br> тренером?</p>
-                        <button>Участвовать</button>                                            
+                        <button onclick="openModalReg()">Участвовать</button>                                            
                         <p>вебинар</p>
                         <img src="images/icons/BlackKey.svg" alt="Кнопочка">
                     </div>
@@ -100,7 +100,7 @@
                     <div class="menu-flex-cover" id="id_div3">
                         <p>29.06 - 4.07</p>
                         <p>Йога, как стиль жизни</p>
-                        <button>Участвовать</button>                                            
+                        <button onclick="openModalReg()">Участвовать</button>                                            
                         <p>вебинар</p>
                         <img src="images/icons/BlackKey.svg" alt="Кнопочка">
                     </div>
@@ -109,7 +109,7 @@
         </section>
         <section>
             <div class="container">
-                    <div class="workout-header">
+                    <div class="workout-header" id="id_workout-header">
                         <p class="p1">Расписание тренировок</p>
                         <p class="p2">22-28 июня</p>
                     </div>
@@ -158,16 +158,15 @@
                 <div class="e-mail">
                     <div class="wrap">
                         <div class="e-mail-title">
-                            <p>Подпишитесь на рассылку</p></div>
+                            <p>Подпишитесь на рассылку</p>
+                        </div>
                             <form class="e-mail-enter" action="/example/handler.php">
-                                <p><input placeholder="Ваш e-mail" name="login"></p>
-                                <p>ПОДПИСАТЬСЯ</p>
+                                <input type="email" placeholder="Ваш e-mail" name="login">
+                                <button type="submit">ПОДПИСАТЬСЯ</button>
                             </form>
                         <div class="e-mail-jackdaw">
-                            <input type="checkbox" id="id_checkbox" class="checkbox">
-                            <label for="id_checkbox"></label>
-                            <img id="id_img2" >
-                            <p>Согласен с обработкой <a href="#">персональных данных</a></p>
+                            <input type="checkbox" id="01" class="checkbox">
+                            <label for="01">Согласен с обработкой <a href="https://annblok.ru/workshop" target="_blank">персональных данных</a></label>
                         </div>
                     </div>    
                 </div>
@@ -175,11 +174,11 @@
         </section>
         <section>
             <div class="container">
-                <div class="company">
+                <div class="company" id="id_company">
                     <div class="company-grid">
                         <div> <p>О компании</p>
                             <p>Наша компания является одной из немногих, кто <br> предлагает фитнес услуги онлайн! Оставайтесь <br>с нами и вы сами увидите, что мы проводим <br>не только онлайн-тренировки.</p>
-                            <button>Записаться</button>
+                            <button onclick="openModalReg()">Записаться</button>
                         </div>
                         <div><img src="images/trainer.png" alt="Тренер"></div> <!--src="images/trainer.png" -->
                         <div><p>Экономия времени </p><p>Не нужно тратить время<br>на дорогу</p></div>
@@ -200,9 +199,9 @@
                                 <a href="index.html" class="header-logo"></a>
                                 <nav>
                                     <ul class="header-nav">
-                                        <li><a href="#">Мероприятия</a></li>
-                                        <li><a href="#">Расписание</a></li>
-                                        <li><a href="#">О&nbspкомпании</a></li>
+                                        <li><a href="#menuFitness" class="up">Мероприятия</a></li>
+                                        <li><a href="#id_workout-header" class="up">Расписание</a></li>
+                                        <li><a href="#id_company" class="up">О&nbspкомпании</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -210,22 +209,22 @@
                                 <a href="index.html" class="header-logo"></a>
                                 <nav>
                                     <ul class="header-nav">
-                                        <li><a href="#">Мероприятия</a></li>
-                                        <li><a href="#">Расписание</a></li>
-                                        <li><a href="#">О компании</a></li>
+                                        <li><a href="#menuFitness" class="up">Мероприятия</a></li>
+                                        <li><a href="#id_workout-header" class="up">Расписание</a></li>
+                                        <li><a href="#id_company" class="up">О компании</a></li>
                                     </ul>
                                 </nav>
-                                <p class="e-mail-fit">info@freefit.com</p>
+                                <p class="e-mail-fit" onclick="openEmail()">info@freefit.com</p>
                                 <div class="head-btn">
                                     <button type="button" class="Instagramicon">
-                                                <img src="images/Instagramicon.svg" alt="Инстаграм">
+                                                <img src="images/Instagramicon.svg" onclick="openInstagram()" alt="Инстаграм">
                                     </button>
                                     <button type="button" class="Facebookicon">
-                                            <img src="images/Facebookicon.svg" alt="Факебок">
+                                            <img src="images/Facebookicon.svg" onclick="openFacebook()" alt="Факебок">
                                     </button>
                                 </div>
                             </div>
-                            <div class="footer-row"><p>© 2020, Все права защищены</p><p>Сделано в рамках курса учебной платформы <a href="#">Annblok</a></p></div>
+                            <div class="footer-row"><p>© 2020, Все права защищены</p><p>Сделано в рамках курса учебной платформы <a href="https://zen.yandex.ru/annblok" target="_blank">Annblok</a></p></div>
                         </div>
                     </div>
                 </header>          
@@ -236,19 +235,33 @@
             <a href="index.html" class="header-logo"></a>
             <button class="gym-close" onclick="closeModal()"><img src="images/icons/close.svg" alt="Крестик"></button>
             <ul class="header-nav">
-                <li><a href="#">Мероприятия</a></li>
-                <li><a href="#">Расписание</a></li>
-                <li><a href="#">О компании</a></li>
+                <li><a href="#menuFitness" class="up">Мероприятия</a></li>
+                <li><a href="#id_workout-header" class="up">Расписание</a></li>
+                <li><a href="#id_company" class="up">О компании</a></li>
              </ul>
             <div class="head-btn">
                 <button type="button" class="Instagramicon">
-                            <img src="images/Instagramicon.svg" alt="Инстаграм">
+                            <img src="images/Instagramicon.svg" onclick="openInstagram()" alt="Инстаграм">
                 </button>
                 <button type="button" class="Facebookicon">
-                        <img src="images/Facebookicon.svg" alt="Факебок">
+                        <img src="images/Facebookicon.svg" onclick="openFacebook()" alt="Факебок">
                 </button>
             </div>
             <div class="modal-box"></div>
+        </div>
+        <div class="modal-reg" id="modal-reg" style="display: none;">
+            <div class="modal-reg-box">
+                <div class="reg-header">
+                    <h3 class="reg_title">Заявка на участие «Марафон выносливости»</h3>
+                    <p class="reg_text">Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+                </div>
+                <form action="#" class="modal-reg-form">
+                    <input class="reg-mail" type="email" placeholder="Ваш e-mail" required>
+                    <input class="reg-tel" type="tel" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Ваш номер телефона" required>
+                    <button type="submit">Отправить</button>
+                </form>
+                <button class="reg-close" onclick="closeModalReg()"></button>
+            </div>
         </div>
               <address hidden>
                 Этот партал зделан сабствинаручно веб-дизайнером Денисом Ерошиным в праграме 
