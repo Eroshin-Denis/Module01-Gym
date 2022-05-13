@@ -39,13 +39,21 @@
       var root = document.querySelector(':root');
       var rootStyles = getComputedStyle(root);
       var mainColor = rootStyles.getPropertyValue('--margin-left-VAR');
+      var S11 = rootStyles.getPropertyValue('--S1');
     let el_con_inf = document.getElementsByClassName('content-info')[0];
     let el_workout = document.getElementsByClassName('workout')[0];
     el_workout.style.cssText = "";
+    var el_company = document.getElementById("id_company"); //блок о компании
+    var el_company3 = document.getElementById("id_com_box3"); //блок о компании
+    var el_company4 = document.getElementById("id_com_box4"); //блок о компании
+    var el_company5 = document.getElementById("id_com_box5"); //блок о компании
+    var el_company6 = document.getElementById("id_com_box6"); //блок о компании
+    var p1, m1, m2, m3, m4, z1, z2, p, m; //блок о компании
     onresize = function() {
     docWidth = document.documentElement.clientWidth;
     docHeight = document.documentElement.clientHeight;
     docRatio = docWidth / docHeight;
+    var S11 = rootStyles.getPropertyValue('--S1');
   if (docWidth>750 && docWidth<1124) {
      k=1.177;
      x=docWidth+17;
@@ -53,8 +61,15 @@
      y=k*x+b;
      el_left.style.height =(y) +'px';
 
-    [...document.getElementsByClassName('div5')].forEach(
-    item => item.style.backgroundColor = "green");
+        m4 = el_company6.offsetWidth, m3 = el_company5.offsetWidth, m2 = el_company4.offsetWidth, m1 = el_company3.offsetWidth; //Ширина блока ; 
+        p1 = el_company.offsetWidth; //Ширина контейнера
+        m = p1 - (m1 + m2 + m3 + m4); //блок о компании m-ширина свободного пространства
+        p = (m / 3); // Ширина пробела
+        z1 = p - (((p1) / 4) - m1); // Довесок к полной ширине пробела
+        z2 = p - (((p1) / 4) - m4); // Довесок к полной ширине пробела
+        el_company4.style.marginLeft = (Math.trunc(z1)) + 'px'; //блок о компании 
+        el_company5.style.marginRight = (Math.trunc(z2)) + 'px'; //маргин блока
+   
     let k1 = 0.06, x1 = x, b1 = -20;
     y1=k1*x1+b1;
     el_h1=document.getElementsByClassName('content-title')[0];
@@ -83,12 +98,16 @@
     el_con_inf.style.marginTop = 13 + "%";
 }
 else if (docWidth<750) {
-  [...document.getElementsByClassName('div5')].forEach(
-    item => item.style.backgroundColor = "blue");
     el_h1.style.fontSize=26 +'px';
     el_p1.style.fontSize=26 +'px';
 }
-else {}
+else {} 
+if (S11==1) {
+  document.getElementById("modal-reg").style.zoom = 0.5;
+}
+else if (S11==2){ document.getElementById("modal-reg").style.zoom = 0.4;
+}
+else if (S11==0){document.getElementById("modal-reg").style.zoom = 1;}
 }
 function resizeFont(div, width, height, size)
 {

@@ -106,7 +106,7 @@ transition: 0.5s;
     color: #2B3541;
     text-transform: uppercase;   /*Заглавные буквы*/
     margin-top: 53%;
-   z-index: 2;
+    z-index: 2;
 }
 .content-title span {
     display: block;
@@ -120,6 +120,7 @@ transition: 0.5s;
 }
 :root {
     --margin-left-VAR: 20%;
+    --S1: 0;
   }
 .content-text {
     font-weight: 400;
@@ -642,7 +643,11 @@ transition: 0.5s;
     line-height: 150%;
     opacity: 0.6;
 }
-.company-grid div:nth-child(n+4) {
+.company-grid div:nth-child(n+3) { /*О компании*/
+    max-width: 92%;
+    width: fit-content;
+}
+.company-grid div:nth-child(n+5) {
     justify-self: end;
 }
 /*Блок подвала */ /*Блок подвала*/ /*Блок подвала*/ /*Блок подвала*/
@@ -890,14 +895,15 @@ footer .head-btn {
 @media (max-width: 1140px) {
     .content-title {
         margin-top: 0%;
+        position: relative;
     }
-}
-@media (max-width: 1058px) {
-    .company-grid div:nth-child(n+3) {
-        width: -webkit-min-content;
-        width: -moz-min-content;
-        width: min-content;
+    /* .company-grid div:nth-child(n+3) { /*О компании*/
+    /*    max-width: 92%;
+        width: fit-content;
     }
+    .company-grid div:nth-child(n+5) {
+        justify-self: end;
+    } */
 }
 @media (max-width: 960px) {
     .visual-bg-left {
@@ -1187,7 +1193,8 @@ footer .head-btn {
     }
     .footer-row a {
                     font-size: 10px;       
-    }      
+    } 
+}
     @media (max-width: 320px) {
     .p2 {
                 display: block;
@@ -1198,5 +1205,25 @@ footer .head-btn {
     .workout-header {
            height: 175px;
     }
-    
-}}
+}
+@media (max-height: 550px) {
+    :root { --S1: 1;}
+}
+@media (max-height: 280px) {
+    :root { --S1: 2;}
+    .reg-close::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: none;
+        background-image: url(../images/icons/close.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        top: 126px;
+        right: 250px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
