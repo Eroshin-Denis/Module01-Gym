@@ -8,7 +8,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="styles/normalize.css">
-      <link rel="stylesheet" href="styles/gym2.css">
+      <link rel="stylesheet" href="styles/gym.css">
       <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png">
       <link rel="apple-touch-icon" sizes="192x192" href="/images/favicon/android-chrome-192x192.png">
       <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -50,24 +50,30 @@
             </div>
         </header>          
       </header>     
-                <div class="bg">
-                    <div class="bg-text">
-                       <h1>онлайн&nbsp;тренировки любой&nbsp;сложности</h1>
-                       <h2>&gt;&nbsp;15&nbsp;&nbsp;тренировок</h2>
-                       <div class="box-text">
-                        <p class="box-text-p">в области спортивной физиологии&nbsp;и&nbsp;нутрициологии</p>
-                        <a class="box-text-btn">Узнать подробнее</a>
-                       </div>
-                      <a href="#events" class="arrow"></a>
-                    </div>
-                    <div class="image-gradient-box">
-                        <div class="box-gradient">
-                            <div class="box-gradient-left"></div>
-                            <div class="box-gradient-right"></div>
-                         </div>
-                        <img class="box-image" src="images/gym-girl.png" alt="girl">
-                    </div>
+        <div class="main">
+            <div class="container">
+                <div class="content">
+                    <h1 class="content-title">
+                        онлайн&nbspтренировки
+                    <span> любой&nbspсложности</span>
+                    </h1>
+                    <p class="content-info">>15&nbspтренировок</p>
+                    <p class="content-text"><span>в&nbspобласти&nbspспортивной</span> физиологии&nbspи&nbspнутрициологии</p>
+                    <a class="content-link" onclick="openModalReg()" href="#">Узнать&nbspподробнее</a>
+                    <div class="div-button-up">
+                        <button href="#menuFitness" class="button-up up">
+                        </button>
+                    </div>    
                 </div>
+                <div class="visual">
+                    <div class="visual-bg">
+                        <div class="visual-bg-left"></div>
+                        <div class="visual-bg-right"></div>
+                        <img id="id_img" src="images/gym-girl.png" alt="Bad girl">
+                    </div> 
+                </div>
+            </div> 
+        </div>
         <section class="menu" id="menuFitness">
             <div class="container">
                 <div class="menu-heder">
@@ -266,4 +272,10 @@
 </body>
 <script src="script/scriptMain.js"></script>
 </html>
+
+
+
+
+
+
 
