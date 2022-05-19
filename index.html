@@ -8,7 +8,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="styles/normalize.css">
-      <link rel="stylesheet" href="styles/gym2.css">
+      <link rel="stylesheet" href="styles/gym.css">
       <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png">
       <link rel="apple-touch-icon" sizes="192x192" href="/images/favicon/android-chrome-192x192.png">
       <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -56,9 +56,9 @@
                        <h2>&gt;&nbsp;15&nbsp;&nbsp;тренировок</h2>
                        <div class="box-text">
                         <p class="box-text-p">в области спортивной физиологии&nbsp;и&nbsp;нутрициологии</p>
-                        <a class="box-text-btn">Узнать подробнее</a>
+                        <a class="box-text-btn" onclick="openModalReg()">Узнать подробнее</a>
                        </div>
-                      <a href="#events" class="arrow"></a>
+                      <a href="#menuFitness" class="arrow up"></a>
                     </div>
                     <div class="image-gradient-box">
                         <div class="box-gradient">
@@ -71,7 +71,7 @@
         <section class="menu" id="menuFitness">
             <div class="container">
                 <div class="menu-heder">
-                    <h2 class="menu-title">
+                    <h2 class="menu-title p1">
                         Ближайшие события
                     </h2>
                 </div>
@@ -175,10 +175,10 @@
                             <button onclick="openModalReg()">Записаться</button>
                         </div>
                         <div><img src="images/trainer.png" alt="Тренер"></div> <!--src="images/trainer.png" -->
-                        <div id="id_com_box3"><p>Экономия времени </p><p>Не нужно тратить время<br>на дорогу</p></div>
-                        <div id="id_com_box4"><p>Индивидуальный подход</p><p>Внимание тренера<br>пренадлежит только вам</p></div>
-                        <div id="id_com_box5"><p>Экономия денег</p><p>Средняя цена одной<br> тренировки - 700₽</p></div>
-                        <div id="id_com_box6"><p>Опытный персонал</p><p>Стаж работы у наших<br>тренеров от 5 лет</p><button onclick="openModalReg()">Записаться</button></div>
+                        <div id="id_com_box3"><p>Экономия времени </p><p>Не нужно тратить время<br class="separator">на дорогу</p></div>
+                        <div id="id_com_box4"><p>Индивидуальный подход</p><p>Внимание тренера<br class="separator">пренадлежит только вам</p></div>
+                        <div id="id_com_box5"><p>Экономия денег</p><p>Средняя цена одной<br class="separator"> тренировки - 700₽</p></div>
+                        <div id="id_com_box6"><p>Опытный персонал</p><p>Стаж работы у наших<br class="separator">тренеров от 5 лет</p><button onclick="openModalReg()">Записаться</button></div>
                     </div>
                 </div>
             </div>
