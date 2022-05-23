@@ -140,8 +140,8 @@ h2 {
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #2B3541;
-    background-color: #FBF138;
+    color: #2b3541;
+    background-color: #fbf138;
     padding: 20px 30px;
     border: 0;
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
@@ -152,6 +152,7 @@ h2 {
 .box-text-btn:hover {
     color: #FBF138;
     background-color: #2B3541;
+    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.3);
 }
 .arrow {
     background-image: url(../images/icons/Arrow.svg);
@@ -343,7 +344,7 @@ h2 {
     width: min-content;
 }
 .workout-header p:nth-child(2) {
-   margin-top: 6%;
+   margin-top: 36px;
 }
 .p1 {
     display: inline-block;
@@ -415,6 +416,9 @@ h2 {
     position: absolute;
     top: -105%;
     opacity: 0;
+ }
+ .workout div:hover {
+    box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
  }
 .workout div:hover img:nth-child(2) {margin-top: 0;}
 .workout div:hover p:nth-child(4) {position: inherit; opacity: 1;}
@@ -536,10 +540,12 @@ h2 {
     background-color: #FBF138;
     transition: 0.5s;
     cursor: pointer;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
 }
 .e-mail-enter button:hover {
     color: #FBF138;
     background-color: #2B3541;
+    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.3);
 }
 .e-mail-jackdaw {
     display: flex;
@@ -617,6 +623,7 @@ h2 {
     border: none;
     cursor: pointer;
     transition: 0.5s;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
 }
 .company-grid div button:nth-child(3) {
     transition: 0.5s;
@@ -624,6 +631,7 @@ h2 {
 .company-grid div button:nth-child(3):hover {
     background-color:#2B3541;
     color: #FBF138;
+    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.3);
 }
 .company-grid div:nth-child(6)  button {
     display: none;
@@ -885,10 +893,12 @@ footer .head-btn {
     cursor: pointer;
     transition: all .2s ease;
     width: 96%;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
 }
 .modal-reg-form button:hover {
     background: #2B3541;
     color: #FBF138;
+    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.3);
 }
 .reg-close {
     width: 20px;
@@ -1223,11 +1233,19 @@ footer .head-btn {
             top: auto;
             z-index: 0;
         }
-    }
     @media (max-height: 550px) {
         :root { --S1: 1;}
     }
     @media (max-width: 530px) {
+        .menu-flex-cover p:nth-child(2) { /* меню */
+           margin-left: 10px; 
+   }
+   .menu-flex-cover p:nth-child(1) { /* меню */
+        margin-left: 10px; 
+    }
+        .menu-flex-cover p:nth-child(2) span { /* меню */
+            font-size: 5vw;  
+   }
     #id_div3  {background-position: 75%; } /*Меню*/
     #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, 0) 100%), url("../images/yoga.png");}
     .company-grid { /*О компании*/
@@ -1297,9 +1315,9 @@ footer .head-btn {
                     padding-inline-start: 0px;
     }
     .p1 {  /*Тренировки*/
-            width: -webkit-min-content;
+            /* width: -webkit-min-content;
             width: -moz-min-content;
-            width: min-content;
+            width: min-content; */
     }
     /* Расписание тренировок    Расписание тренировок    Расписание тренировок */
     .workout {
@@ -1357,15 +1375,23 @@ footer .head-btn {
 } 
 }
     @media (max-width: 320px) {
-    .p2 {
+        .menu-flex-cover p:nth-child(2) span { /* меню */
+            font-size: 10vw;  
+   }
+    /* .p2 {
                 display: block;
                 float: left;   
                 margin: 0;
                 padding: 0;           
-    }
+    } */
     .workout-header {
            height: 175px;
     }
+}
+@media (max-width: 301px) {
+    .workout-header p:nth-child(2) {
+        margin-top: 0px;
+     }
 }
 @media (max-height: 280px) {
     :root { --S1: 2;}
