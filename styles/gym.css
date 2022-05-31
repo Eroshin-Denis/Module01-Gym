@@ -242,7 +242,7 @@ h2 {
 /* блок услуг меню*//* блок услуг меню*//* блок услуг меню*/
 #menuFitness {
     margin-top: 50px;
-    margin-bottom: 130px;
+    margin-bottom: 30px;
 }
 .menu-title {
     font-weight: 700;
@@ -1249,11 +1249,13 @@ footer .head-btn {
     #id_div3  {background-position: 75%; } /*Меню*/
     #id_div3:hover {background-image: linear-gradient(180deg, rgba(251,241,56,.6) 0%, rgba(253, 249, 182, 0) 100%), url("../images/yoga.png");}
     .company-grid { /*О компании*/
-        grid-template-rows: 1fr 0.3fr 0.3fr 0.3fr 0.8fr 0.9fr;
+        grid-template-rows: 1fr 0.3fr 0.3fr 0.3fr min-content min-content;
         grid-template-columns: 1fr;
         }
     .company-grid div:nth-child(2) {
         order: 2;
+        margin-top: 20px;
+        margin-bottom: 20px;
         }
     .company-grid div:nth-child(n+3) p:nth-child(1) {
         margin-top: 15px;
